@@ -1,0 +1,287 @@
+body {
+  background-image: url(../assets/table.png);
+  background-size: fill;
+  overflow: hidden;
+}
+
+
+.perspective{
+  transform: rotateX(20deg);
+}
+
+#PerspectiveSet{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  perspective: 50em;
+  width: 100%;
+  height: 15em;
+  
+}
+
+#btn{
+  font-size: 70px;
+  color: white;
+  font-family: 'Franklin Gothic Medium';
+  background-color: transparent;
+  border: none;
+  text-shadow:  3px 4px 10px black;
+  transition: transform 1000ms, text-shadow 1000ms; 
+}
+
+#btn:hover{
+  transform: scale(1.3);
+  cursor: pointer;
+  transition: transform 1000ms, text-shadow 00ms; 
+}
+
+#UIVisuals{
+  font-size: 70px;
+  color: white;
+ 
+}
+
+ .hand {
+  display: "none";
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  display: inline-block;
+  font-size: 30px;
+  color: white;
+  font-family: Arial;
+  perspective: 20em;
+} 
+
+.card {
+  margin-right: 15px;
+  box-shadow: 2px 2px 7px black;  
+  border-radius: 5px;  
+  transform: rotateX(20deg);
+  transition: transform 1000ms, box-shadow 1000ms; 
+}
+
+.card:hover{
+  transform: rotateX(0deg) translateY(-20px) scale(1.1);
+  box-shadow: 5px 10px 10px black;
+  transition: transform 200ms, box-shadow 200ms;   
+}
+
+.cardTwist{
+  animation: flipInY 0.2s;
+}
+
+
+
+#container {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  font-size: 70px;
+  color: white;
+  font-family: 'Franklin Gothic Medium';
+}
+
+h2 {
+  font-size: 40px;
+}
+
+#UI{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#wood{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 101%;
+  height: 100%;
+  box-shadow:  0px -10px 20px black;
+}
+
+.UIbtn{
+  position: absolute;
+  top: 30%; 
+  background-image: url('../assets/wood.png');
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: white;
+  font-size: 50%;
+  padding: 5px;
+  border: solid;
+  border-color: #592d00;
+  border-width: 3px;
+  text-align: center;
+  width: 7%;
+  height: 28%;
+  box-shadow:  3px 4px 20px black;
+  text-shadow: 0px 1px 0px black;
+  transform: rotateX(20deg);
+  margin: 0;
+  display: none;
+}
+
+.UIbtn:hover{
+  cursor: pointer;  
+  box-shadow:  6px 8px 40px black;
+  
+
+}
+
+.turnBtn{
+  display: none;
+}
+
+#twist{  
+  left: 32%;
+}
+
+#double{
+  left: 42%;
+  width: 15%;
+}
+
+#stick{
+ left: 60%;
+}
+
+#mute{
+  left: 85%;
+}
+
+
+
+.UIDisplay{
+  position: absolute;
+  top: 30%; 
+  background-image: url('../assets/wood.png');
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: white;
+  font-size: 80%;
+  border: solid;
+  border-color: #592d00;
+  border-width: 3px;
+  text-align: center;
+  width: 14%;
+  height: 25%;
+  box-shadow: inset 3px 4px 20px black;
+  transform: rotateX(20deg);
+  margin: 0;
+  padding: 5px;
+  display: none;
+}
+
+#betBtn{
+  left: 54%;  
+}
+
+#betInput{
+  left: 37%; 
+}
+
+#output{
+  font-size: 50px;
+  color: white;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  text-align: center;
+  margin: 0;
+}
+
+#btns{
+  text-align: center;
+}
+
+#playAgain{
+  position: absolute;
+  text-align: center;
+  width: 20%;
+  left: 40%;
+  top: 10%;
+  padding: 0;
+  margin: 0;
+}
+
+
+#restart{
+  position: relative;
+  left: 0;
+  width: 80%;
+  top: 5%; 
+  height: 20%; 
+  margin: 0;
+}
+
+#PlayerHand{
+  top: 45%;
+}
+
+#DealerHand{
+  top: 10%;
+  transform: scale(0.8);
+}
+
+#playerMoney{
+  position: absolute;
+  text-align: center;  
+  left: 10%;
+  top: 30%;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+@-webkit-keyframes flipInY {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+ 
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    opacity: 1;
+  }
+}
+
+@keyframes flipInY {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+ 
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    opacity: 1;
+  }
+}
+
+.flipInY {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInY;
+  animation-name: flipInY;
+}

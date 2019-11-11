@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>BlackJack</title>
+    <link rel="stylesheet" type="text/css" href="src/css/game.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="Title">BlackJack</h1>
+        <h2>Welcome, click start to begin</h2>
+        <input id="btn" type="button" value="Start" />
+    </div>
+
+    <div id="PlayerHand" class="hand">
+    </div>
+    <div id="DealerHand" class="hand">
+    </div>
+
+
+
+
+    <div id="PerspectiveSet">
+        <div id="UI">
+
+            <img id="wood" src="src/assets/wood.png" class="perspective">
+            <div id="UIVisuals">
+                <p id="playerMoney" class="UIDisplay perspective">£500</p>
+                <div id="btns">
+                    <div id="playAgain">
+                    <p id="output" class="perspective"></p>
+                    <input type="button" id="restart" class="UIbtn perspective " value="Play Again">
+                    </div>
+                    <input type="button" id="twist" class="UIbtn perspective turnBtn" value="Twist">                    
+                    <input type="button" id="stick" class="UIbtn perspective turnBtn" value="Stick">
+                    <input type="button" id="double" class="UIbtn perspective turnBtn" value="Double Down">
+                    <input type="button" id="mute" class="UIbtn perspective" value="Mute">
+                    <div id="betUI ">
+                        <input type="number" id="betInput" value="50" step="25" min="25" onkeydown="return false"
+                            class="UIDisplay perspective">
+                        <input type="button" id="betBtn" value="Bet" class="UIbtn perspective">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <audio id="music">
+        <source src="src/assets/sounds/bensound-thejazzpiano.mp3">
+    </audio>
+    <audio id="crowd">
+        <source src="src/assets/sounds/crowd.mp3">
+    </audio>
+
+
+
+    <script type="module">
+        import Game from './src/BlackJackGame.js';
+        window.game = new Game();
+            
+       
+        document.getElementById("btn").addEventListener("click", gameStart.bind(this));
+        window.game.showRules();
+        function gameStart(){       
+        document.getElementById("twist").addEventListener("click", game.twist.bind(window.game));
+        document.getElementById("stick").addEventListener("click", game.stick.bind(window.game));
+        document.getElementById("double").addEventListener("click", game.doubleDown.bind(window.game));
+        document.getElementById("restart").addEventListener("click", game.restart.bind(window.game));
+        document.getElementById("betBtn").addEventListener("click", game.bet.bind(window.game));
+        document.getElementById("betInput").addEventListener("change",
+        game.playCoin.bind(window.game));
+        //document.getElementById("mute").addEventListener("click", game.mute.bind(window.game));
+        game.start();                
+        }        
+    </script>
+</body>
+
+</html>
