@@ -1,11 +1,34 @@
 # Blackjack
-A blackjack game created with html, css and javascript
+A game of blackjack created with html, css and javascript
 
-I created this game to develop my skills with the fundamental web languages of html, css and javascript. It was also my first look
-at using classes within javascript and at NodeJS.
+# ThreeJS
 
-In order to find the dependencies please read the package.json.
+### Purpose
+I created this game to develop my skills in the fundamental web languages of html, css and javascript. It was also my first look
+at using classes within javascript and using a package managaer with NodeJS
 
-The rules are displayed in-game, to find them simply press Ctrl + Shift + J to open the console where they will be displayed.
+### Required dependencies 
+You must have **NodeJS** installed so that you are able to use node package managager to download the dependencies.
 
-To run this game, simply open terminal and type in 'http-server -o'. This will serve the game locally, then add /index.html to the address to play the game.
+The dependencies that this program requries are:
+
+* http-server: ^0.110.1
+
+## Build setup
+
+``` bash
+# Install dependencies
+npm install
+
+# Open in a browser
+http-server -o
+
+# Go to web page
+Add '/index.html' to browser address
+
+```
+
+
+
+
+
