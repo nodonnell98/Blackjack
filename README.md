@@ -25,7 +25,7 @@ http-server -o
 Add '/index.html' to browser address
 
 ```
-
+_**To find the rules of the game read the Rules file or press <kbd>CTRL</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> to open the console in-game**_
 
 
 
