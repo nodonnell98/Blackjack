@@ -1,8 +1,6 @@
 # Blackjack
 A game of blackjack created with html, css and javascript
 
-# ThreeJS
-
 ### Purpose
 I created this game to develop my skills in the fundamental web languages of html, css and javascript. It was also my first look
 at using classes within javascript and using a package managaer with NodeJS
